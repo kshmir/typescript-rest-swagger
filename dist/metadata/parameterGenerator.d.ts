@@ -5,7 +5,7 @@ export declare class ParameterGenerator {
     private readonly method;
     private readonly path;
     private readonly genericTypeMap;
-    constructor(parameter: ts.ParameterDeclaration, method: string, path: string, genericTypeMap?: Map<String, ts.TypeNode>);
+    constructor(parameter: ts.ParameterDeclaration, method: string, path: string, genericTypeMap?: Map<String, ts.TypeNode> | undefined);
     generate(): Parameter;
     private getCurrentLocation();
     private getRequestParameter(parameter);

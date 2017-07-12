@@ -29,7 +29,7 @@ export class SpecGenerator {
                             reject(err);
                         }
                         if (yaml) {
-                            fs.writeFile(`${swaggerDir}/swagger.yaml`, YAML.stringify(spec ,1000), (errYaml: any) => {
+                            fs.writeFile(`${swaggerDir}/swagger.yaml`, YAML.stringify(spec, 1000), (errYaml: any) => {
                                 if (errYaml) {
                                     reject(errYaml);
                                 }
@@ -294,6 +294,7 @@ export class SpecGenerator {
         }
 
         const refType = this.getSwaggerTypeForReferenceType(type as ReferenceType);
+        console.log(refType);
         return refType;
     }
 
@@ -302,7 +303,7 @@ export class SpecGenerator {
             binary: { type: 'string', format: 'binary' },
             boolean: { type: 'boolean' },
             buffer: { type: 'file' },
-//            buffer: { type: 'string', format: 'base64' },
+            //            buffer: { type: 'string', format: 'base64' },
             byte: { type: 'string', format: 'byte' },
             date: { type: 'string', format: 'date' },
             datetime: { type: 'string', format: 'date-time' },

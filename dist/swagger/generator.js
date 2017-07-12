@@ -288,6 +288,7 @@ var SpecGenerator = (function () {
             return this.getSwaggerTypeForEnumType(enumType);
         }
         var refType = this.getSwaggerTypeForReferenceType(type);
+        console.log(refType);
         return refType;
     };
     SpecGenerator.prototype.getSwaggerTypeForPrimitiveType = function (type) {

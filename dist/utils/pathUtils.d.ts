@@ -1,1 +1,1 @@
-export declare function normalizePath(path?: string): string;
+export declare function normalizePath(path?: string): string | undefined;

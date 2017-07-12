@@ -14,8 +14,8 @@ export declare class MetadataGenerator {
     onFinish(callback: (referenceTypes: {
         [typeName: string]: ReferenceType;
     }) => void): void;
-    getClassDeclaration(className: string): ts.Node;
-    getInterfaceDeclaration(className: string): ts.Node;
+    getClassDeclaration(className: string): ts.Node | undefined;
+    getInterfaceDeclaration(className: string): ts.Node | undefined;
     private buildControllers();
 }
 export interface Metadata {
